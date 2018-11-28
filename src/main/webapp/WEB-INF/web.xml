@@ -1,0 +1,25 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>TestServlet1</servlet-name>
+    <servlet-class>servlet.TestServlet1</servlet-class>
+      <load-on-startup>2</load-on-startup>
+  </servlet>
+    <servlet>
+        <servlet-name>TestServlet2</servlet-name>
+        <servlet-class>servlet.TestServlet2</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet1</servlet-name>
+    <url-pattern>/servlet/TestServlet1</url-pattern>
+  </servlet-mapping>
+</web-app>
