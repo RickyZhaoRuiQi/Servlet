@@ -32,3 +32,20 @@
     - 绝对路径：放之四海而皆准的路径。
     - 相对路径：相对于当前资源的路径。
     
+---
+
+- 通过ServletConfig获取初始化参数
+    - 在web.xml中赋予初始化参数，在servlet中通过getInitParameter()方法获取初始化参数
+- MVC模式：MVC(Model,View,Controller)，是软件开发过程中比较流行的设计思想。旨在分离模型、控制、视图。是一种分层思想的体现
+    - 一般->jsp（视图），servlet（控制），javabean（模型）
+- model2
+    - model1：JSP+JavaBeans+DB
+    - model2：Model2开发模型就是MVC思想的体现，DB，JavaBean（M），Servlet（C），JSP（V）
+    
+---
+
+- 使用Servlet技术实现购物车效果
+    - MVC模型实现（Jsp+Servlet+dao）
+        1. 创建购物车类
+        2. 编写Servlet
+        3. 创建页面层

@@ -11,15 +11,39 @@
   <servlet>
     <servlet-name>TestServlet1</servlet-name>
     <servlet-class>servlet.TestServlet1</servlet-class>
-      <load-on-startup>2</load-on-startup>
+    <load-on-startup>2</load-on-startup>
   </servlet>
-    <servlet>
-        <servlet-name>TestServlet2</servlet-name>
-        <servlet-class>servlet.TestServlet2</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
+  <servlet>
+    <servlet-name>TestServlet2</servlet-name>
+    <servlet-class>servlet.TestServlet2</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetInitParameterServlet</servlet-name>
+    <servlet-class>servlet.GetInitParameterServlet</servlet-class>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>admin</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>123456</param-value>
+    </init-param>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>TestServlet1</servlet-name>
     <url-pattern>/servlet/TestServlet1</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>TestServlet2</servlet-name>
+    <url-pattern>/servlet/TestServlet2</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GetInitParameterServlet</servlet-name>
+    <url-pattern>/servlet/GetInitParameterServlet</url-pattern>
   </servlet-mapping>
 </web-app>
