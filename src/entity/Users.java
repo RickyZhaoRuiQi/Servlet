@@ -3,7 +3,7 @@ package entity;
 
 import java.util.Date;
 
-//用户实体类
+//用户尸体类
 public class Users {
     private String username;        //用户名
     private String mypassword;      //密码
@@ -12,7 +12,7 @@ public class Users {
     private Date birthday;          //生日
     private String[] favorites;     //爱好
     private String introduce;       //自我介绍
-    private boolean flag;       //是否接收协议
+    private boolean flag;       //是否接受协议
 
     public Users()
     {

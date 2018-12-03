@@ -5,7 +5,7 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index1.jsp</welcome-file>
   </welcome-file-list>
 
   <servlet>
@@ -32,6 +32,11 @@
     </init-param>
   </servlet>
 
+  <servlet>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>servlet.CartServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>TestServlet1</servlet-name>
     <url-pattern>/servlet/TestServlet1</url-pattern>
@@ -45,5 +50,10 @@
   <servlet-mapping>
     <servlet-name>GetInitParameterServlet</servlet-name>
     <url-pattern>/servlet/GetInitParameterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/servlet/CartServlet</url-pattern>
   </servlet-mapping>
 </web-app>
