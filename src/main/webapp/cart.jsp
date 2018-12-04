@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"%>
-<%@ page import="entity.Cart" %>
-<%@ page import="entity.Items" %>
+<%@ page import="entity.Cart"%>
+<%@ page import="entity.Items"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</tr>
 				<% 
 				   //首先判断session中是否有购物车对象
-				   if(request.getSession().getAttribute("cart")!=null)
+				   if(request.getSession().getAttribute("cart") != null)
 				   {
 				%>
 				<!-- 循环的开始 -->

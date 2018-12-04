@@ -18,7 +18,7 @@ public class CartServlet extends HttpServlet {
     private ItemsDAO idao = new ItemsDAO(); //商品业务逻辑类对象
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/htnl;charset=urf-8");
+        response.setContentType("text/html;charset=utf-8");
         if(request.getParameter("action") != null)
         {
             this.action = request.getParameter("action");
@@ -33,8 +33,28 @@ public class CartServlet extends HttpServlet {
             if(action.equals("show"))//如果是显示购物车
             {
                 //showCart(request,response);
+                request.getRequestDispatcher("/cart.jsp").forward(request,response);
+            }
+            if(action.equals("delete"))//如果是执行删除购物车中的商品
+            {
+                if(deleteFromCart(request,response))
+                    request.getRequestDispatcher("/cart.jsp").forward(request,response);
+                else
+                    request.getRequestDispatcher("/cart.jsp").forward(request,response);
             }
         }
+    }
+
+    //从购物车中删除商品
+    private boolean deleteFromCart(HttpServletRequest request,HttpServletResponse response)
+    {
+        String id = request.getParameter("id");
+        Cart cart = (Cart)request.getSession().getAttribute("cart");
+        Items item = idao.getItemsById(Integer.parseInt(id));
+        if(cart.removeGoodsFromCart(item))
+            return true;
+        else
+            return false;
     }
 
     //添加商品进购物车的方法
