@@ -2,6 +2,8 @@
 
 ---
 
+- wiki https://zh.wikipedia.org/wiki/Java_Servlet
+
 - 什么是Servlet
 	- Servlet是在服务器上运行的小程序。一个Servlet就是一个Java类，并且可以通过“请求-响应”编程模型来访问这个驻留在服务器内存里的Servlet程序。
 	
