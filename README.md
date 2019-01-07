@@ -10,12 +10,12 @@
 	
 - 手工编写一个Servlet
 	1. 继承HttpServlet
-	2. 重写doGet()或者goPost()方法
+	2. 重写doGet()或者doPost()方法
 	3. 在web.xml中注册Servlet
 	
 - 使用idea编写Servlet
     1. src->new->Servlet
-    2. 重写doGet()或者dPost()方法
+    2. 重写doGet()或者doPost()方法
     3. 部署运行
     
 - Servlet生命周期
